@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+
+    <title>Wordle Helper</title>
+  </head>
+  
+  <body>
+
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center txt-dark">Wordle Helper</h1>
+        </div>
+    </div>
+
+    <div class="container txt-dark outline">
+      <div class="row">
+        <div class="col-md">
+			<h3 class="text-center correct">Correct Letters</h3>
+			<div class="correct form-group row">
+				<input id="letter1" class="form-control col text-center correct" type="text" oninput="limitCharacters('letter1')"></input>
+				<input id="letter2" class="form-control col text-center correct" type="text" oninput="limitCharacters('letter2')"></input>
+				<input id="letter3" class="form-control col text-center correct" type="text" oninput="limitCharacters('letter3')"></input>
+				<input id="letter4" class="form-control col text-center correct" type="text" oninput="limitCharacters('letter4')"></input>
+				<input id="letter5" class="form-control col text-center correct" type="text" oninput="limitCharacters('letter5')"></input>
+			</div>  
+			<br>
+			<h3 class="text-center wrong">Misplaced</h3>
+			<div class="notInPosition form-group row">
+				<input id="notLetter1" class="form-control col text-center wrong" type="text"></input>
+				<input id="notLetter2" class="form-control col text-center wrong" type="text"></input>
+				<input id="notLetter3" class="form-control col text-center wrong" type="text"></input>
+				<input id="notLetter4" class="form-control col text-center wrong" type="text"></input>
+				<input id="notLetter5" class="form-control col text-center wrong" type="text"></input>
+			</div>
+			<br>
+			<h3 class="text-center misplaced">Not In Word</h3>
+			<div class="notInWord form-group row">
+				<input id="notInWord" class="form-control col text-center misplaced" type="text"></input>
+			</div>
+			<br>
+			<div class="row">
+				<button onclick="check()" class="btn btn-primary col">check</button>
+				<button onclick="clearInputs()" class="btn btn-secondary col">clear</button>      
+			</div>
+		</div>
+      </div>
+    </div>
+
+    <div class="container outline txt-dark">
+      <div class="row">
+        <div class="col-md">
+          <h3 class="text-center" id="possibilities">Possibilities:</h3>
+          <p id="results" class="text-center"></p>
+        </div>
+      </div>
+    </div>
+	  
+     <!-- Bootstrap JavaScript Components-LOAD LAST -->
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="js/wordleHelper.js"></script>
+	  
+  </body>
+</html>
