@@ -1,0 +1,22 @@
+git config --global user.name "Your Name"
+git config --global user.email "name@somewhere.com"
+
+clear					clears the console window
+ls 					lists files in a directory
+mkdir [name] 				makes a directory with the name specified
+cd [name] 				changes to that specified directory
+
+git clone <address>			Clones an online repo to your computer
+
+git status 	  			shows the status of files in our repo
+
+git add [filename] 			adds a single file to the staging area
+git add . 				adds all modified and new files to the staging area
+
+git commit 				commits changes to the repo. opens text editor for message
+git commit -m "message" 		commits changes to the repo with short message
+
+git push				pushes committed files to the remote repo
+
+
+ 
